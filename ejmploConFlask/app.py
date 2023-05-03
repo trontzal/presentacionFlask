@@ -12,7 +12,11 @@ def rutas():
 
 @app.route('/plantillas')
 def plantillas():
-    return render_template('index.html')
+    data = [
+            {'nombre':"Gonzalo", 'apellido':"Lecumberri"},
+            {'nombre':"Pepito", 'apellido':"popito"}
+        ]
+    return render_template('index.html', data = data)
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
